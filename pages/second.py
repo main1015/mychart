@@ -47,4 +47,6 @@ caption = ["男模", "女星1", "女星2", "女星3"]
 cols = cycle(st.columns(4)) # st.columns here since it is out of beta at the time I'm writing this
 for idx, filteredImage in enumerate(filteredImages):
     image = Image.open('static/'+filteredImage)
+    img_array = np.array(image)
+    st.text(f"{img_array.shape}")
     next(cols).image(image, width=150, caption=caption[idx])
