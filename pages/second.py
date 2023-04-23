@@ -27,6 +27,7 @@ with st.container():
         st.header("this is one")
         st.write("This is inside the container")
     with col2:
+        st.set_option('deprecation.showfileUploaderEncoding', False)
         st.header("this is two")
         image = Image.open('static/js.jpg')
         st.image(image, height=200)
