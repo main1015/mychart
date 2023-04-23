@@ -26,5 +26,5 @@ with st.echo():
     st.markdown("# Main page 🎈")
     st.sidebar.markdown("# Main page 🎈")
 
-    st.markdown("[!Click me](app/static/js.jpg)](https://www.baidu.com)")
+    st.markdown("[![Click me](app/static/js.jpg)](https://www.baidu.com)")
 
