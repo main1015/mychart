@@ -11,6 +11,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
+from itertools import cycle
 
 st.markdown("# Page 2 🎉")
 st.sidebar.markdown("# Page 2 🎉")
@@ -20,6 +21,8 @@ chart_data = pd.DataFrame(
 
 st.line_chart(chart_data)
 
+
+
 with st.container():
 
     col1, col2, col3 = st.columns(3)
@@ -27,10 +30,9 @@ with st.container():
         st.header("this is one")
         st.write("This is inside the container")
     with col2:
-        st.set_option('deprecation.showfileUploaderEncoding', False)
         st.header("this is two")
         image = Image.open('static/js.jpg')
-        st.image(image, height=200)
+        st.image(image)
 
     with col3:
         st.header("this is three")
@@ -40,3 +42,9 @@ with st.container():
 
 st.write("This is outside the container")
 
+filteredImages = ["js.jpg", "nv1.jpg", "nv2.jpg", "nv3.jpg"]
+caption = ["男模", "女星1", "女星2", "女星3"]
+cols = cycle(st.columns(4)) # st.columns here since it is out of beta at the time I'm writing this
+for idx, filteredImage in enumerate(filteredImages):
+    image = Image.open('static/'+filteredImage)
+    next(cols).image(image, width=150, caption=caption[idx])
