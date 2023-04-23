@@ -49,6 +49,6 @@ for idx, filteredImage in enumerate(filteredImages):
     image = Image.open('static/'+filteredImage)
     img_array = np.array(image)
     st.text(f"{img_array.shape}")
-    new_shape = (150, 210, 3)
+    new_shape = (150, 250, 3)
     img = np.array(Image.fromarray(img_array).resize(new_shape[:2]))
     next(cols).image(img, width=150, caption=caption[idx])
