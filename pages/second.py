@@ -20,10 +20,18 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 with st.container():
-   st.write("This is inside the container")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.header("this is one")
+        st.write("This is inside the container")
+    with col1:
+        st.header("this is two")
 
-   # You can call any Streamlit command, including custom components:
-   st.bar_chart(np.random.randn(50, 3))
+    with col1:
+        st.header("this is three")
+
+        # You can call any Streamlit command, including custom components:
+        st.bar_chart(np.random.randn(50, 3))
 
 st.write("This is outside the container")
 
