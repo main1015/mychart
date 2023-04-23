@@ -20,12 +20,14 @@ chart_data = pd.DataFrame(
 st.line_chart(chart_data)
 
 with st.container():
+
     col1, col2, col3 = st.columns(3)
     with col1:
         st.header("this is one")
         st.write("This is inside the container")
     with col2:
         st.header("this is two")
+        st.image("app/static/js.jpg")
 
     with col3:
         st.header("this is three")
