@@ -1,0 +1,14 @@
+*.DS_Store
+.idea
+*.pyc
+*.swp
+build
+DS_Store
+dist
+SOURCES.txt
+test
+tests
+*.egg-info
+celerybeat-schedule
+venv
+*.db
