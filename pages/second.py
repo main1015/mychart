@@ -24,10 +24,10 @@ with st.container():
     with col1:
         st.header("this is one")
         st.write("This is inside the container")
-    with col1:
+    with col2:
         st.header("this is two")
 
-    with col1:
+    with col3:
         st.header("this is three")
 
         # You can call any Streamlit command, including custom components:
