@@ -20,6 +20,11 @@ import streamlit as st
 # if __name__ == '__main__':
 #     div(2, 0)
 import streamlit as st
+with st.echo():
+    st.title('我的Streamlit')
 
-st.markdown("# Main page 🎈")
-st.sidebar.markdown("# Main page 🎈")
+    st.markdown("# Main page 🎈")
+    st.sidebar.markdown("# Main page 🎈")
+
+    st.markdown("[!Click me](app/static/js.jpg)](https://www.baidu.com)")
+
