@@ -29,7 +29,7 @@ with st.container():
     with col2:
         st.header("this is two")
         image = Image.open('static/js.jpg')
-        st.image(image)
+        st.image(image, height=200)
 
     with col3:
         st.header("this is three")
