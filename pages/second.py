@@ -10,6 +10,7 @@ __author__ = "wangyu"
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
 
 st.markdown("# Page 2 🎉")
 st.sidebar.markdown("# Page 2 🎉")
@@ -27,7 +28,8 @@ with st.container():
         st.write("This is inside the container")
     with col2:
         st.header("this is two")
-        st.image("app/static/js.jpg")
+        image = Image.open('static/js.jpg')
+        st.image(image)
 
     with col3:
         st.header("this is three")
